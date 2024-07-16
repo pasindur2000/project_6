@@ -14,7 +14,7 @@ class _TwitterAuthState extends State<TwitterAuth> {
       padding: const EdgeInsets.only(top: 0),
       height: 60,
       child: IconButton(
-        icon: Image.asset('assets/images/linkedin.png'), // Replaced ImageIcon with Image.asset
+        icon: Image.asset('assets/images/linkedin.png'),
         iconSize: 20.0,
         onPressed: () async {
           // Your onPressed logic here

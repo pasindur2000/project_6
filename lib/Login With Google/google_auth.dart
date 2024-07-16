@@ -4,7 +4,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 class FirebaseServices {
   final auth = FirebaseAuth.instance;
   final googleSignIn = GoogleSignIn();
-  // dont't gorget to add firebasea auth and google sign in package
   signInWithGoogle() async {
     try {
       final GoogleSignInAccount? googleSignInAccount =
@@ -29,4 +28,3 @@ class FirebaseServices {
     auth.signOut();
   }
 }
-// now we call this firebase services in our coninue with google button
