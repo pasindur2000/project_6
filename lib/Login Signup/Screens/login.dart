@@ -181,7 +181,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       border: Border.all(color: Constants.primaryColor),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -190,7 +191,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 30,
                           child: Image.asset('assets/images/google.png'),
                         ),
-                         // Add spacing between image and text
                         const Text(
                           'Sign In with Google',
                           style: TextStyle(
@@ -203,7 +203,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                   ),
-
                 ),
                 const SizedBox(
                   height: 20,

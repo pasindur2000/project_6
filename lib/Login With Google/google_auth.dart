@@ -4,10 +4,12 @@ import 'package:google_sign_in/google_sign_in.dart';
 class FirebaseServices {
   final auth = FirebaseAuth.instance;
   final googleSignIn = GoogleSignIn();
+
   signInWithGoogle() async {
     try {
-      final GoogleSignInAccount? googleSignInAccount =
-      await googleSignIn.signIn();
+      // Sign out the current user to force the account selection popup
+      await googleSignIn.signOut();
+      final GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
       if (googleSignInAccount != null) {
         final GoogleSignInAuthentication googleSignInAuthentication =
         await googleSignInAccount.authentication;
@@ -22,7 +24,7 @@ class FirebaseServices {
     }
   }
 
-// for sign out
+  // for sign out
   googleSignOut() async {
     await googleSignIn.signOut();
     auth.signOut();
